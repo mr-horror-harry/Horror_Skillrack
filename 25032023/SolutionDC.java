@@ -9,7 +9,7 @@ class Function{
     }    
 }
 
-class Hello {
+class SolutionDC {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
