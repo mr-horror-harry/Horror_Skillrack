@@ -1,5 +1,6 @@
 import java.util.*;
-public class SolutionDT {
+ 
+class SolutionDT {
 
     public static void main(String[] args) {
         int n = new Scanner(System.in).nextInt();
