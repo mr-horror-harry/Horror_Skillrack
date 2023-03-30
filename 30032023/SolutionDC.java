@@ -1,3 +1,5 @@
+// Todays DC Soln using Interface logic
+
 import java.util.Scanner;
 
 class Main
