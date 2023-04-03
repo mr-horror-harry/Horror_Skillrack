@@ -8,9 +8,10 @@ class Main{
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
+		sc.nextLine();
 		List <String> li = new  ArrayList <String> (Arrays.asList(sc.nextLine().split(" ")));
 
-		for(int i=n; i>=0; i--) System.out.print(li.get(i)+" ");
+		for(int i=n-1; i>=0; i--) System.out.print(li.get(i)+" ");
 		for(int i=n; i<li.size(); i++) System.out.print(li.get(i)+" ");
 
 	}
