@@ -1,4 +1,4 @@
-x = input()
+x = input()  # no use for the split approach
 ar = input().split()
 odd, eve = 9999999, 2;
 
