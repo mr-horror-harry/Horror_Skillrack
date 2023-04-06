@@ -6,7 +6,7 @@ int main()
     int n;
     scanf("%d ",&n);
     
-    int val=1, dash=0, r=1, beg, end, inc;
+    int val=1, dash=0, r=1;
     while(n>0){
         for(int i=0; i<dash; i++) printf("- ");
         dash++;
