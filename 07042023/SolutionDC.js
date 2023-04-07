@@ -1,3 +1,5 @@
+//tmp variable method by js
+
 var readline = require('readline');
 var reader = readline.createInterface({
   input: process.stdin,
