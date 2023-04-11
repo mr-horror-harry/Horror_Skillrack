@@ -17,6 +17,7 @@ public class Main {
         for(int i=0; i<m; i++){
             for(int j=0; j<n; j++){
                 if(mt[i][j]=='*'){
+			
                     int k=j, len=0;
                     
                     while(k<n && mt[i][k]=='*'){
