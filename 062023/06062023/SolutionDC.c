@@ -3,7 +3,7 @@
 
 int main()
 {
-    short n=4, i, j;
+    short n, i, j;
     int k;
     scanf("%hi %d\n", &n, &k);
     int mt[n][n];
