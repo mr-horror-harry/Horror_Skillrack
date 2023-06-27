@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Hello {
+class Main {
 
     public static void main(String[] args) {
 
@@ -20,5 +20,17 @@ public class Hello {
             }
         }
         System.out.print(f == 0 ? -1 : max - 1);
+    }
+}
+
+ public class SolutionDT{
+    public void printer(){
+        System.out.print("Helllo");
+    }
+}
+
+public class SolutionDT{
+    public void print(){
+        System.out.print("Hey");
     }
 }
