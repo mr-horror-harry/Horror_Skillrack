@@ -4,4 +4,4 @@
 
 • I use either C / Java / Python / Js to solve problems.
 
-• Note: Ignore the program typed in the Ques Photos.
+• Note: Ignore the program typed in the Ques Images.
