@@ -33,7 +33,7 @@ public class Hello {
                     }
                     
                     if(f==0 && ptr==s.length()){
-                        ct++;
+                        ct=1;
                         cf=1;
                         System.out.print(j+1 + " ");
                     }
@@ -43,7 +43,7 @@ public class Hello {
                 }
             }
         }
-        System.out.print(ct>0 ? "" : "-1");
+        System.out.print(ct==0 ? "" : "-1");
 
 	}
 }
