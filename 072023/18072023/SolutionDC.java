@@ -20,9 +20,7 @@ public class Hello {
                 res+=i;
             else{
                 oF=1;
-                if(i>2){
-                    res+=i-1;
-                }
+                res+=i-1;
             }
         }
         
