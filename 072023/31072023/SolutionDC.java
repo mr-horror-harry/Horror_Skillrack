@@ -1,0 +1,18 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        int a=sc.nextInt(), b=sc.nextInt(),
+            x=sc.nextInt(), y=sc.nextInt(), z=sc.nextInt();
+            
+        while(a<=b){
+            
+            if(a%x==0 || a%y==0 || a%z==0)
+                System.out.print(a+" ");
+            
+            a++;
+        }
+	}
+}
