@@ -1,3 +1,6 @@
+// Solved without Loop
+// Formula method
+
 import java.util.*;
 public class Hello {
 
