@@ -1,16 +1,5 @@
-s=input()
-vow='aeiouAEIOU'
-f=""
-pos=""
+def isEven(x,y,z):
+    return not (x%2==1 or y%2==1 or z%2==1)
 
-for i in range(len(s)-1, -1, -1):
-	if s[i] in vow:
-		if f!="":
-			s[pos]=s[i]
-			pos=i
-		else:
-			f=s[i]
-			pos=i
-
-for c in s:
-	print(c, end="")
+x,y,z=map(int, input().split())
+print(x+y+z if isEven(x,y,z) else x*y*z)
