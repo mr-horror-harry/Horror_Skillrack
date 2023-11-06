@@ -1,4 +1,4 @@
-def getPow(x, y):
+def getPow(x, y) -> int:
     powerVal=1
     while y>0:
         powerVal*=x
