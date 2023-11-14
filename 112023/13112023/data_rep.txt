@@ -1,0 +1,69 @@
+
+Diff queries:
+
+SELECT column_name, data_type
+FROM information_schema.columns
+WHERE table_name = 'director';
+
+
+-------------------------------------------------------------
+
+
+SELECT table_name
+FROM information_schema.tables
+WHERE table_schema = 'public' AND table_type = 'BASE TABLE';
+
+
+-------------------------------------------------------------
+
+--rowwise rep
+select department, count(*)
+from employees
+where department in ('Sports', 'Tools', 'Clothing', 'Computers')
+group by department
+order by department
+
+-- colwise rep
+select sum (case when department='Sports' then 1 else 0 end) as Sports_Team,
+sum( case when department='Tools' then 1 else 0 end) as Tools_Team,
+sum ( case when department='Clothing' then 1 else 0 end) as Clothing_Team,
+sum ( case when department='Computers' then 1 else 0 end) as Computer_Team
+from employees
+
+
+--transpose
+select sum(case when region_id in (select region_id from regions where country='United States') then 1 else 0 end) as US_Count,
+sum(case when region_id in (select region_id in (select region_id from regions where country='Asia') then 1 else 0 end) as Asia_Count,
+sum ( case when region_id in (select region_id from regions where country='Canada') then 1 else 0 end) as Canada_Count
+from employees
+
+------------------------------
+
+union
+
+select * from
+(select first_name, department, hire_date, country
+from employees e
+inner join regions r
+on e.region_id = r.region_id
+where hire_date=(select max(hire_date) from employees)
+limit 1) a
+union
+select * from 
+(select first_name, department, hire_date, country
+from employees e
+inner join regions r
+on e.region_id = r.region_id
+where hire_date=(select min(hire_date) from employees)
+limit 1) b
+
+------------------------------
+
+window
+
+select employee_id, first_name, salary,
+(sum(salary) over())-salary as entire_diff, 
+(sum(salary) over(partition by department))-salary as dept_diff,
+round((avg(salary) over())-salary) as entire_avg_diff,
+round((avg(salary) over(partition by department))-salary) as dept_avg_diff
+from employees;
