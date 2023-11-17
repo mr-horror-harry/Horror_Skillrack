@@ -1,12 +1,9 @@
-h,m=map(int, input().split(":"))
-m_val=int(input())
+x,y,z=map(int, input().split())
 
-m_val+=m
-
-cry=m_val//60
-rem=m_val%60
-
-h+=cry
-m=rem
-
-print(str(h%24).zfill(2), str(m).zfill(2), sep=":" )
+n=1
+while True:
+    if n not in range(x,y+1):
+        if n%z==0:
+            print(n)
+            break
+    n+=1
