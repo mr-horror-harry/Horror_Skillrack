@@ -1,9 +1,12 @@
-n=int(input())
-l1=list(map(int, input().split()))
-l2=list(map(int, input().split()))
+s=input()
+f,r=0,len(s)
 
-for i in range(n):
-    if l1[i]%2==1:
-        print(l1[i], end=" ")
-    if l2[i]%2==1:
-        print(l2[i], end=" ")
+while f<r:
+    print("*"*f,s[f:r],"*"*f, sep="")
+    f+=1; r-=1
+
+f-=1; r+=1
+
+while f>0:
+    f-=1; r+=1
+    print("*"*f,s[f:r],"*"*f, sep="")
